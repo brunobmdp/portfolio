@@ -11,7 +11,7 @@ type Props = {
 export default function About({ pageInfo }: Props) {
   const ref = useRef(null)
   const isInView = useInView(ref, {
-    amount: 'all',
+    amount: 'some',
     once: true,
   })
 
@@ -44,6 +44,7 @@ export default function About({ pageInfo }: Props) {
         md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
       >
         <Image
+          priority
           className="object-cover"
           src={urlFor(pageInfo.profilePic).url()}
           fill

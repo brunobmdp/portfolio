@@ -21,7 +21,7 @@ export default function Home({ pageInfo, projects, skills, socials }: Props) {
     <div
       className="scroll-smooth bg-blue900 h-screen w-screen text-gray100 
     font-Roboto overflow-x-hidden snap-y snap-mandatory overflow-y-scroll z-0
-    scrollbar-thin scrollbar-track-gray400/20 scrollbar-thumb-blue400/60 "
+    scrollbar-thin scrollbar-track-gray400/20 scrollbar-thumb-blue400/60 box-border"
     >
       <Head>
         <title>Portfólio</title>

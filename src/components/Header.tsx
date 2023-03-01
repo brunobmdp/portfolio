@@ -59,7 +59,7 @@ export default function Header({ socials }: Props) {
           href="#contact"
         />
 
-        <a href="#contact" className="uppercase hidden md:inline-flex text-sm">
+        <a href="/#contact" className="uppercase hidden md:inline-flex text-sm">
           contact me
         </a>
       </motion.div>
