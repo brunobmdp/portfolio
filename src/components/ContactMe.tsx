@@ -29,14 +29,18 @@ export default function ContactMe({ pageInfo }: Props) {
   })
 
   async function handleContactSubmit(formData: ContactFormData) {
-    await api.post('contact', {
-      name: formData.name,
-      email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
-    })
-    reset()
-    alert('E-mail sended')
+    try {
+      await api.post('contact', {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      })
+      reset()
+      alert('E-mail sended')
+    } catch (error) {
+      alert('deu ruim')
+    }
   }
 
   return (

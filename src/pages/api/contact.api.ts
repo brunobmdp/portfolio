@@ -36,10 +36,10 @@ export default async function handler(
     .send(msg)
     .then(() => {
       console.log('Email sent')
+      return res.status(200).end()
     })
     .catch((error) => {
       console.error(error)
+      return res.status(400).json(error)
     })
-
-  return res.status(200).end()
 }
