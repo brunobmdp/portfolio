@@ -1,4 +1,4 @@
-import { defineType} from 'sanity'
+import { defineType } from 'sanity'
 
 export default defineType({
   name: 'project',
@@ -6,42 +6,40 @@ export default defineType({
   type: 'document',
   fields: [
     {
-      name:'title',
-      title:'Title',
+      name: 'title',
+      title: 'Title',
       description: 'Title of the project',
-      type:'string',
+      type: 'string',
     },
     {
-      name:'image',
-      title:'Image',
-      type:'image',
-      options:{
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: {
         hotspot: true,
-      }
+      },
     },
     {
-      name:'summary',
-      title:'Summary',
-      type:'string',
+      name: 'summary',
+      title: 'Summary',
+      type: 'string',
     },
-    
-    {
-      name:'technologies',
-      title:'Technologies',
-      type:'array',
-      of:[{type: 'reference', to: { type: 'skill'}}]
-    },
-    {
-      name:'linkToBuild',
-      title:'linkToBuild',
-      type:'url',
-    },
-    {
-      name:'linkToCode',
-      title:'linkToCode',
-      type:'url',
-    },
-    
-  ],
 
+    {
+      name: 'technologies',
+      title: 'Technologies',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'skill' } }],
+    },
+    {
+      name: 'linkToBuild',
+      title: 'linkToBuild',
+      type: 'url',
+    },
+    {
+      name: 'linkToCode',
+      title: 'linkToCode',
+      type: 'url',
+    },
+  ],
 })
