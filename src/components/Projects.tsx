@@ -12,7 +12,7 @@ export default function Projects({ projects }: Props) {
   const ref = useRef(null)
 
   const isInView = useInView(ref, {
-    amount: 'some',
+    amount: 'all',
     once: true,
   })
   return (

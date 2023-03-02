@@ -10,7 +10,7 @@ type Props = {
 export default function Skills({ skills }: Props) {
   const ref = useRef(null)
   const isInView = useInView(ref, {
-    amount: 'some',
+    amount: 'all',
     once: true,
   })
 

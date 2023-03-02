@@ -11,7 +11,7 @@ type Props = {
 export default function About({ pageInfo }: Props) {
   const ref = useRef(null)
   const isInView = useInView(ref, {
-    amount: 'some',
+    amount: 'all',
     once: true,
   })
 

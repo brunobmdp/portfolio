@@ -56,7 +56,7 @@ export default function Header({ socials }: Props) {
           network="email"
           fgColor="gray"
           bgColor="transparent"
-          href="#contact"
+          url="#contact"
         />
 
         <a href="/#contact" className="uppercase hidden md:inline-flex text-sm">
