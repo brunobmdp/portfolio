@@ -5,8 +5,18 @@
 @tailwind utilities;
 
 @layer components{
+
+  .defaultSection {
+    @apply relative min-h-[100svh] h-full w-screen  mx-auto overflow-hidden flex flex-col
+    justify-center items-center px-5
+  }
   .heroButton {
-    @apply px-4 py-2 border border-transparent rounded-full uppercase text-xs tracking-widest text-gray400 transition-all hover:border-blue400/40 hover:text-blue400/40
+    @apply px-4 py-2 border border-transparent rounded-full uppercase text-xs tracking-widest 
+    text-gray400 transition-all hover:border-blue400 hover:text-blue400
+  }
+
+  .pageTitle {
+    @apply w-full mt-20 uppercase pl-5 tracking-[20px] text-center text-gray100 text-2xl
   }
 
   .contactInput {

@@ -23,27 +23,28 @@ export default function Hero({ pageInfo }: Props) {
     delaySpeed: 2000,
   })
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="flex flex-col items-center justify-center gap-8  text-center max-w-7xl">
       <BackgroundCircles />
-      <div className="relative rounded-full h-32 w-32 overflow-hidden ">
-        <Image
-          className="object-cover"
-          src={urlFor(pageInfo.heroImage).url()}
-          sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
-          fill
-          priority
-          alt=""
-        />
-      </div>
-      <div className="z-20">
+      <Image
+        priority
+        className="object-cover relative rounded-full h-32 w-32 "
+        src={urlFor(pageInfo.heroImage).url()}
+        width={128}
+        height={128}
+        alt=""
+      />
+      <div className="flex flex-col z-20">
         <h2 className="text-sm uppercase text-gray400 pb-2 tracking-[15px]">
           {pageInfo.role}
         </h2>
-        <h1 className="text-4xl lg:text-6xl font-semibold px-10">
-          <span className="text-white">{text}</span>
-          <Cursor cursorColor="#2C66C3" />
-        </h1>
-        <div>
+        <div className="flex justify-center items-center w-full overflow-hidden">
+          <h1 className="text-3xl lg:text-6xl font-semibold ">
+            <span className="text-white">{text}</span>
+            <Cursor cursorColor="#2C66C3" />
+          </h1>
+        </div>
+
+        <div className="flex w-full">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

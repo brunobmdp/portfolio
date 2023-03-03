@@ -44,22 +44,14 @@ export default function ContactMe({ pageInfo }: Props) {
   }
 
   return (
-    <div
-      className="relative h-screen flex flex-col text-center md:text-left  md:flex-row
-      max-w-7xl px-10 justify-evenly mx-auto items-center"
-    >
-      <h3
-        className=" absolute top-24 uppercase tracking-[20px] text-gray100 
-        text-2xl"
-      >
-        contact
-      </h3>
-      <div className=" flex flex-col space-y-10">
-        <h4 className=" text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-white">
-          If you need some of my skills.{' '}
-          <span className="text-blue400">Contact me</span>
-        </h4>
-        <div className=" space-y-10">
+    <div className="flex flex-col  h-full w-full max-w-7xl ">
+      <h3 className="pageTitle">contact</h3>
+      <h4 className="uppercase tracking-[3px] p-5 text-gray400 text-md text-center">
+        If you need some of my skills.{' '}
+        <span className="text-blue400">Contact me</span>
+      </h4>
+      <div className="flex flex-col w-full h-full gap-5 justify-around items-center  lg:flex-row">
+        <div className=" flex flex-col gap-5 items-center">
           <div className=" flex items-center space-x-5 justify-center">
             <PhoneIcon className=" text-blue400 h-7 w-7 animate-pulse" />
             <p className=" text-2xl">{pageInfo.phoneNumber}</p>
@@ -74,8 +66,8 @@ export default function ContactMe({ pageInfo }: Props) {
           </div>
         </div>
         <form
+          className=" flex flex-col gap-2"
           onSubmit={handleSubmit(handleContactSubmit)}
-          className=" flex flex-col space-y-2 w-fit mx-auto "
         >
           <div className="flex flex-wrap gap-2 ">
             <input

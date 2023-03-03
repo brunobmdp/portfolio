@@ -10,25 +10,19 @@ type Props = {
 export default function Skills({ skills }: Props) {
   const ref = useRef(null)
   const isInView = useInView(ref, {
-    amount: 'all',
+    amount: 0.5,
     once: true,
   })
 
   return (
     <div
       ref={ref}
-      className="h-screen flex relative flex-col text-center 
-    md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen 
-    justify-center xl:space-y-0 mx-auto items-center"
+      className="h-full flex flex-col text-center mx-auto  max-w-7xl xl:px-10 xl:space-y-0 "
     >
-      <div className="absolute top-24 ">
-        <h3 className="uppercase tracking-[20px] text-gray100 text-2xl text-center">
-          Skills
-        </h3>
-        <h3 className=" mt-12 uppercase tracking-[3px] text-gray400 text-sm">
-          Here is a list of all my current skills
-        </h3>
-      </div>
+      <h3 className="pageTitle">Skills</h3>
+      <h3 className="uppercase tracking-[3px] p-10 text-gray400 text-sm">
+        Here is a list of all my current skills
+      </h3>
 
       <motion.div
         initial={{
@@ -42,7 +36,7 @@ export default function Skills({ skills }: Props) {
           opacity: isInView ? 1 : 0,
           x: isInView ? 0 : -200,
         }}
-        className=" grid  grid-cols-4 gap-5 xl:gap-6 xl:pt-20"
+        className=" grid grid-cols-4 gap-5 xl:gap-6 xl:pt-20"
       >
         {skills.map((skill) => (
           <Skill key={skill._id} skill={skill} />

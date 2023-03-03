@@ -27,22 +27,19 @@ export default function Home({ pageInfo, projects, skills, socials }: Props) {
         <title>Portfólio</title>
       </Head>
       <Header socials={socials} />
-      <section id="hero" className="snap-start ">
+      <section id="hero" className="defaultSection snap-start ">
         <Hero pageInfo={pageInfo} />
       </section>
-      <section id="about" className="snap-start ">
+      <section id="about" className="defaultSection snap-start ">
         <About pageInfo={pageInfo} />
       </section>
-      {/* Skills */}
-      <section id="skills" className="snap-start">
+      <section id="skills" className="defaultSection snap-start">
         <Skills skills={skills} />
       </section>
-      {/* Projects */}
-      <section id="projects" className="snap-start">
+      <section id="projects" className="defaultSection snap-start">
         <Projects projects={projects} />
       </section>
-      {/* Contact Me */}
-      <section id="contact" className="snap-start">
+      <section id="contact" className="defaultSection snap-start">
         <ContactMe pageInfo={pageInfo} />
       </section>
     </div>
