@@ -36,19 +36,20 @@ export default function Projects({ projects }: Props) {
         Projects
       </h3>
       <div
-        className="relative w-full  flex overflow-x-scroll overflow-y-hidden snap-x 
+        className="relative w-full max-w-7xl  flex overflow-x-scroll overflow-y-hidden snap-x 
         snap-mandatory z-20  scrollbar-thin scrollbar-track-gray400/20
         scrollbar-thumb-blue400/60"
       >
         {projects.map((project, index) => (
           <div
             ref={ref}
-            className="w-full max-w-7xl mx-auto h-screen snap-center p-20 flex flex-col flex-shrink-0 
+            className="w-full  mx-auto h-screen snap-center p-20 flex flex-col flex-shrink-0 
             items-center justify-center gap-10 lg:flex-row"
             key={project._id}
           >
             <div className="flex items-center justify-center">
               <motion.a
+                href={project.linkToBuild}
                 initial={{
                   y: -300,
                   opacity: 0,
