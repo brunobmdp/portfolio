@@ -38,13 +38,12 @@ export default function Hero({ pageInfo }: Props) {
           {pageInfo.role}
         </h2>
         <div className="flex justify-center items-center w-full overflow-hidden">
-          <h1 className="text-3xl lg:text-6xl font-semibold ">
+          <h1 className="text-4xl lg:text-6xl font-semibold ">
             <span className="text-white">{text}</span>
             <Cursor cursorColor="#2C66C3" />
           </h1>
         </div>
-
-        <div className="flex w-full">
+        <div className="flex w-full items-center justify-center">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
