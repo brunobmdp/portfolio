@@ -7,7 +7,7 @@
 @layer components{
 
   .defaultSection {
-    @apply relative min-h-[100svh] h-full w-screen  mx-auto overflow-hidden flex flex-col
+    @apply relative h-screen min-h-[650px]  w-screen  mx-auto overflow-hidden flex flex-col
     justify-center items-center px-5
   }
   .heroButton {
